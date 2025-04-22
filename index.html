@@ -30,8 +30,7 @@
     <div class="container container-body d-flex flex-column flex-body justify-content-center text-center">
       <main class="my-4">
         <div id="page-title" class="fs-3 my-3">It's a girl.</div>
-        <img src="fetal-ultrasound.jpg" alt="Fetal ultrasound" class="img-fluid rounded-3 my-2">
-        <div id="page-contents" class="fs-6 my-2"></div>
+        <img id="report-image" src="" alt="Fetal ultrasound" class="bg-white img-fluid rounded-3 my-2">
       </main>
     </div>
   </div>
@@ -43,21 +42,15 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     (() => {
-      const contents = [
-        "Not needed.",
-        "Erased.",
-        "She never arrived.",
-        "Lost before life.",
-        "Dreamed, then forgotten.",
-        "Another daughter gone.",
-        "Buried by choice.",
-        "Her name was never spoken.",
-        "Taken before her time.",
-        "\"Fortunately\" unborn.",
+      const images = [
+        "assets/report-jk.svg",
+        "assets/report-ob.svg",
+        "assets/report-ql.svg",
+        "assets/report-qw.svg",
+        "assets/report-zy.svg",
       ];
-      const pageContents = document.getElementById("page-contents");
-      const index = Math.floor(Math.random() * contents.length);
-      pageContents.innerText = contents[index];
+      const reportImage = document.getElementById("report-image");
+      reportImage.src = images[Math.floor(Math.random() * images.length)];
     })();
   </script>
 </body>
